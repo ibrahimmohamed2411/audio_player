@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 import '../screens/audio_player_screen.dart';
 import '../view_models/home_view_model.dart';
 import 'mini_audio_player_widget.dart';
+
 class MiniPlayer extends StatelessWidget {
   const MiniPlayer({
     super.key,
@@ -28,7 +29,7 @@ class MiniPlayer extends StatelessWidget {
             if (height <= 60.h + 20.h) {
               return MiniAudioPlayerView();
             }
-            return Center(child: AudioPlayerScreen());
+            return Center(child: AudioPlayerWidget());
           },
         ),
       ),
