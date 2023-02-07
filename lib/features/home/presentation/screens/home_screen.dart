@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../../../core/state_management/view_state.dart';
 import '../../../../core/widgets/custom_container.dart';
+import '../../../../generated/l10n.dart';
 import '../../../../locator/locator.dart';
 import '../view_models/home_view_model.dart';
 import '../widgets/mini_player.dart';
@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
       create: (context) => locator<HomeViewModel>()..getSongs(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Audio Player'),
+          title: Text(S.of(context).app_title),
         ),
         body: SafeArea(
           child: CustomContainer(
